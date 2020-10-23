@@ -6,12 +6,13 @@ class Question extends StatelessWidget {
   Question(this.questionText);
   @override
   Widget build(BuildContext context) {
+    var deviceWidth = MediaQuery.of(context).size.width;
     return Container(
-      width: double.infinity,
+      width: deviceWidth - 50,
       child: Text(
         questionText,
         style: TextStyle(
-          color: Colors.black87,
+          color: Colors.black,
           fontSize: 30.0,
           fontWeight: FontWeight.bold,
         ),
